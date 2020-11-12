@@ -9,6 +9,13 @@ const routes: Routes = [
       import("./logistics-reservation/logistics-reservation.module").then(
         m => m.LogisticsReservationModule
       )
+
+  },
+  {
+    path:"laf",
+    loadChildren: () =>
+    import("./lost-and-found/lost-and-found.module").then(
+      m => m.LostAndFoundModule)
   }
 ];
 @NgModule({

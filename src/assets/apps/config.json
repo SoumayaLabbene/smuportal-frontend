@@ -18,5 +18,14 @@
     "appName": "Admin Dashboard",
     "iconUrl": "users.png",
     "path": "/apps/admin"
+  },
+
+ {
+    "appName": "LOST&FOUND ",
+    "iconUrl":"lost-and-found",
+    "path":"/laf/main"
+
+
+
   }
 ]
