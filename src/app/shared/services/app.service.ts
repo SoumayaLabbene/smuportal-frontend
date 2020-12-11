@@ -19,6 +19,7 @@ export class AppService {
       .get("/assets/apps/config.json")
       .toPromise();
     this.appsConfig = data;
+    
   }
 
   getSearchResults(): Observable<Application[]> {

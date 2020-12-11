@@ -1,0 +1,39 @@
+<ng-container *ngIf="this.reportRemoved | async">
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      The Report Has Been Successfully Removed.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </ng-container>
+  
+  <div class="table-responsive">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Details</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let report of reportCalls | async; let i = index;">
+          <tr>
+            <th scope="row">{{i}}</th>
+            <td>{{report.Title}}</td>
+            <td>{{report.Details}}</td>
+            <td><button type="button" class="btn btn-danger" 
+            (click)="deleteReportcall(report.Title)">Delete</button>
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-success" 
+      (click)="goToAdd()">Add Report call</button>
+    </div>
+  
+  </div>
+  

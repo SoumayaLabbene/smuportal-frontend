@@ -12,7 +12,7 @@ const routes: Routes = [
 
   },
   {
-    path:"laf",
+    path:"lnf",
     loadChildren: () =>
     import("./lost-and-found/lost-and-found.module").then(
       m => m.LostAndFoundModule)

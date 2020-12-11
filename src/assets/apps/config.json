@@ -21,11 +21,8 @@
   },
 
  {
-    "appName": "LOST&FOUND ",
-    "iconUrl":"lost-and-found",
-    "path":"/laf/main"
-
-
-
+    "appName": "LOST&FOUND",
+    "iconUrl":"lost-and-found.png",
+    "path":"/lnf"
   }
 ]
