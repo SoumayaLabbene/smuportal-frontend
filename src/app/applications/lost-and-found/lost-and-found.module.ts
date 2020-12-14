@@ -6,6 +6,7 @@ import {​​ RouterModule, Routes }​​ from "@angular/router";
 import {​​ SharedModule }​​ from "@app/shared/shared.module";
 import { ReportCallsComponent } from './report-calls/report-calls.component';
 import { LnfAddReportComponent } from './lnf-add-report/lnf-add-report.component';
+
 const routes: Routes = [
   {
     path:"", 

@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./lnf-add-report.component.css']
 })
 export class LnfAddReportComponent implements OnInit {
-
+ callTypes: any = ["Report Call", "Claim Call"];
   reportForm;
   reportAdded: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   constructor(private formBuilder: FormBuilder, private lnfService: LnfService,
@@ -18,10 +18,12 @@ export class LnfAddReportComponent implements OnInit {
     this.reportForm = this.formBuilder.group({
       title: "",
       details: "",
+      type: "",
     })
   }
 
   ngOnInit() {
+   
   }
 
   onSubmit(report) {

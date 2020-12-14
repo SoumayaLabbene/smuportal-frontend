@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () =>
     import("./lost-and-found/lost-and-found.module").then(
       m => m.LostAndFoundModule)
-  }
+  } 
 ];
 @NgModule({
   declarations: [],
