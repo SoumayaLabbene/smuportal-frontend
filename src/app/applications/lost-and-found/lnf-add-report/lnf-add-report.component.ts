@@ -18,6 +18,7 @@ export class LnfAddReportComponent implements OnInit {
     this.reportForm = this.formBuilder.group({
       title: "",
       details: "",
+      reportImage: "",
       type: "",
     })
   }
@@ -31,6 +32,20 @@ export class LnfAddReportComponent implements OnInit {
     console.warn("Report Data:", report);
     this.lnfService.addReportcall(report);
     this.reportAdded.next(true);
+  }
+
+  onFileSelected(event){
+    let me = this;
+    let file = event.target.files[0];
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      me.reportForm.patchValue({
+        reportImage: reader.result
+      })
+    };
+    reader.onerror = (err) => {console.error(err);
+    }
   }
 
   goBack() {

@@ -1,6 +1,6 @@
 <ng-container *ngIf="this.reportRemoved | async">
     <div class="alert alert-success alert-dismissible fade show" role="alert">
-      The Report Has Been Successfully Removed.
+      The Call Has Been Successfully Removed.
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -11,11 +11,12 @@
     <table class="table">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">#</th>
+          <th scope="col">Id</th>
           <th scope="col">Title</th>
           <th scope="col">Details</th>
+          <th scope="col">Image</th>
           <th scope="col">Type</th>
-          <th scope="col">Action</th>
+          <th scope="col"></th>
         </tr>
       </thead>
       <tbody>
@@ -24,6 +25,7 @@
             <th scope="row">{{i}}</th>
             <td>{{report.Title}}</td>
             <td>{{report.Details}}</td>
+            <td><img [src]="report.Image" [width]="60" [height]="120"></td>
             <td>{{report.Type}}</td>
             <td><button type="button" class="btn btn-danger" 
             (click)="deleteReportcall(report.Title)">Delete</button>
@@ -33,7 +35,7 @@
       </tbody>
     </table>
     <div class="btn-group" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-success" 
+      <button type="button" class="btn btn-primary" 
       (click)="goToAdd()">Add call</button>
     </div>
   
