@@ -6,6 +6,8 @@ import {​​ RouterModule, Routes }​​ from "@angular/router";
 import {​​ SharedModule }​​ from "@app/shared/shared.module";
 import { ReportCallsComponent } from './report-calls/report-calls.component';
 import { LnfAddReportComponent } from './lnf-add-report/lnf-add-report.component';
+import { CallCardComponent } from './call-card/call-card.component';
+
 
 const routes: Routes = [
   {
@@ -20,16 +22,18 @@ const routes: Routes = [
     path: "add",
     component: LnfAddReportComponent
   }
+  
 ]
 
 @NgModule({
-  declarations: [LnfMainComponent, ReportCallsComponent, LnfAddReportComponent],
+  declarations: [LnfMainComponent, ReportCallsComponent, LnfAddReportComponent, CallCardComponent],
   imports: [
     SharedModule,
     RouterModule.forChild(routes),
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ]
 })
 export class LostAndFoundModule { }

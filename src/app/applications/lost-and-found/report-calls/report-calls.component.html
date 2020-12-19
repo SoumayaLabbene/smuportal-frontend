@@ -1,4 +1,4 @@
-<ng-container *ngIf="this.reportRemoved | async">
+<ng-container *ngIf="this.reportCallsRemoved | async">
     <div class="alert alert-success alert-dismissible fade show" role="alert">
       The Call Has Been Successfully Removed.
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -8,8 +8,8 @@
   </ng-container>
   
   <div class="table-responsive">
-    <table class="table">
-      <thead class="thead-dark">
+    <table class="table table-bordered">
+      <thead class="table-dark">
         <tr>
           <th scope="col">Id</th>
           <th scope="col">Title</th>
@@ -25,7 +25,7 @@
             <th scope="row">{{i}}</th>
             <td>{{report.Title}}</td>
             <td>{{report.Details}}</td>
-            <td><img [src]="report.Image" [width]="60" [height]="120"></td>
+            <td><img [src]="report.Image" [width]="100" [height]="120"></td>
             <td>{{report.Type}}</td>
             <td><button type="button" class="btn btn-danger" 
             (click)="deleteReportcall(report.Title)">Delete</button>
@@ -40,4 +40,17 @@
     </div>
   
   </div>
+
+   <div class="card-deck">
+  <div class="row justify-content-center">
+    <div *ngFor="let report of reportCalls | async">
+      <a class="report-link" [routerLink]=report.path>
+        <report-call-card [Title] =report.Title [Details] = report.Details [Image] = report.Image></report-call-card>
+      </a>
+    </div>
+  </div>
+
+    <router-outlet></router-outlet>
+  </div>
+
   
