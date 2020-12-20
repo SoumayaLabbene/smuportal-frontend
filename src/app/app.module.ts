@@ -33,7 +33,7 @@ import { ApplicationsModule } from "./applications/applications.module";
     ProfileModule,
     RedoPortalModule,
     ApplicationsModule,
-    RouterModule.forRoot([]),
+    RouterModule.forRoot([])
   ],
   providers: [
     {
