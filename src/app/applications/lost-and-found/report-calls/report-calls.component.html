@@ -1,4 +1,4 @@
-<!--<ng-container *ngIf="this.reportCallsRemoved | async">
+<!--<ng-container *ngIf="this.reportRemoved | async">
     <div class="alert alert-success alert-dismissible fade show" role="alert">
       The Call Has Been Successfully Removed.
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -41,14 +41,19 @@
   
   </div>-->
 
+  
+
 <div class="container-fluid">
   
     <div class=card-deck>
       <div class="row justify-content-center">
       <div *ngFor="let report of reportCalls | async">
 
-        <a class="report-link" [routerLink]=report.path>
-          <report-call-card [Title]=report.Title [Details]=report.Details [Image]=report.Image></report-call-card>
+        <a class="report-link" [routerLink]=report.path  *ngIf="report.Type=='Report Call'" style="color:#028B95">
+          <report-call-card [Title]=report.Title [Image]=report.Image [Details]=report.Details [Contact]=report.Contact [_id]=report._id></report-call-card>
+        </a>
+        <a class="report-link" [routerLink]=report.path  *ngIf="report.Type=='Claim Call'" style="color:#ff8800">
+          <report-call-card [Title]=report.Title [Image]=report.Image [Details]=report.Details  [Contact]=report.Contact [_id]=report._id></report-call-card>
         </a>
       </div>
 
@@ -58,3 +63,7 @@
   
 </div>
 <router-outlet></router-outlet>
+
+<div class="btn-group" role="group" aria-label="Basic example" style='position:absolute;right:10px;top:110px'>  <button type="button" class="btn btn-dark" 
+  (click)="goToAdd()">Add Call</button>
+</div>

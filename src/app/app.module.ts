@@ -16,6 +16,7 @@ import { AppComponent } from "./app.component";
 import { AppService } from "./shared";
 import { ApplicationsModule } from "./applications/applications.module";
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [

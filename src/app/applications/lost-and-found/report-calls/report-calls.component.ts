@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import {LnfService} from "@app/shared/services"
+import {LnfService} from "@app/shared/services";
 import { report } from "@app/shared/models";
 import { BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';

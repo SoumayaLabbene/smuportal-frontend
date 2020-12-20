@@ -15,11 +15,22 @@
   
   .custom-text {
     font-size: 0.8125rem;
+    color: #5b5b5b;
   }
   
   /* Leaves a margin between card border and card text, default was -15 */
   .row {
     margin-right: 0;
     margin-left: 0;
+  }
 
+  .id{
+    font-size: x-small;
+    color: #5b5b5b;
+
+  }
+
+  .contact{
+    font-size: 0.8125rem;
+    color: #303F9F;
   }

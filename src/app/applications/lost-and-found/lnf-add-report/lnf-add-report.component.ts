@@ -20,6 +20,7 @@ export class LnfAddReportComponent implements OnInit {
       details: "",
       reportImage: "",
       type: "",
+      contact:"",
     })
   }
 
