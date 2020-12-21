@@ -6,13 +6,13 @@
     </button>
   </div>
 </ng-container>
-<div class="card custom-card text-center shadow-sm mb-3" style="height: 21rem; width: 15rem">
+<div class="card custom-card text-center shadow-sm mb-3" style="height: 21rem; width: 15rem"  [routerLink]=this.path> 
     <div class="row h-100 align-items-center">
-      <div class="col">
-        <img src='{{this.Image}}' [width]="150" [height]="150">
+      <div class="col" >
+        <img  src='{{this.Image}}' [width]="150" [height]="150">
 
       
-        <p class="feature-title">  
+        <p class="report-link">  
             {{this.Title}}
         </p>
       
@@ -31,4 +31,4 @@
     <br>
    
 
-  </div>
+</div>

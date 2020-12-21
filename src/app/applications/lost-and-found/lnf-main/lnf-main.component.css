@@ -5,3 +5,22 @@
     color: #5b5b5b;
     margin: 0 auto;
   }
+  .box-report{
+    background-color:#028B95;
+    border: #5b5b5b; 
+	width:100px; 
+  height:25px; 
+  font-family: georgia;
+  text-align: center;
+  }
+  .box-claim{
+    background-color:#ff8800 ;
+    border: #5b5b5b; 
+    margin-top:10px ;
+	width:100px; 
+  height:25px; 
+  font-family: georgia;
+  text-align: center;
+ 
+  }
+  
